@@ -9,7 +9,7 @@ require("./db/conn");
 
 const Register = require("./models/registers");
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../template/views");
@@ -50,11 +50,12 @@ app.post("/register" , async (req,res) => {
         const token = await registerEmployee.generateAuthToken();
 
         const registered = await registerEmployee.save();
+
         res.status(201).render("index");
 
     } catch (error) {
         res.status(400).send(error);
-        console.log("the error in register");
+        console.log("the error in register", error);
     }
 });
 
