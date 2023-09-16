@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function showContent(contentId) {
+      var contents = document.getElementsByClassName('content');
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+      }
+      document.getElementById(contentId).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <nav>
+    <a href="#" onclick="showContent('login')">Login</a> |
+    <a href="#" onclick="showContent('register')">Register</a>
+  </nav>
+  <div class="content" id="register" style="display: none;">
+    {{> register}}
+  </div>
+  <div class="content" id="login" style="display: none;">
+    {{> login}}
+  </div>
+</body>
+</html>
