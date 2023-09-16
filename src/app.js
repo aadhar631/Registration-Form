@@ -9,7 +9,7 @@ require("./db/conn");
 
 const Register = require("./models/registers");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../template/views");
