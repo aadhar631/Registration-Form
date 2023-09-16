@@ -39,7 +39,7 @@ app.get("/login" , (req,res) => {
 });
 
 // create a new user in our database 
-app.post("https://registration-form-n2ri.onrender.com/register" , async (req,res) => {
+app.post("/register" , async (req,res) => {
     try {
         const registerEmployee = new Register({
             name : req.body.name,
