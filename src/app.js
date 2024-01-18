@@ -54,7 +54,7 @@ app.post("/register" , async (req,res) => {
         res.status(201).render("index");
 
     } catch (error) {
-        res.status(400).send(error);
+        res.status(400).send("User already exists");
         console.log("the error in register", error);
     }
 });
@@ -81,10 +81,6 @@ app.post("/login", async (req,res) => {
         res.status(400).send("Invalid Email");
     }
 })
-
-app.get("/login" , (req,res) => {
-    res.render("login");
-});
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);

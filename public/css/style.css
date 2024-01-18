@@ -202,3 +202,22 @@ input[type=submit]:active {
   text-decoration: underline 2px;
   text-underline-offset: 5px;
 }
+
+.success-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+}
+
+.redirects {
+  display: flex;
+  gap: 2rem;;
+}
+
+.redirects a {
+  text-decoration: none;
+  color: yellow;
+}
